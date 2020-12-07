@@ -4,8 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fdbb4f37071b42d981f605a7d1d9f217" Name="Diagram1">
-        <EntityTypeShape EntityType="IRF_PROJECTModel.Felhasznalok" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="2f35e125f7e542c4ba3cbd460abbaba9" Name="Diagram1">
+        <EntityTypeShape EntityType="Database1Model.Cikkszámok" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.FelhasznaloAdatok" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Tárhelyek" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="Database1Model.cikkszamfk" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

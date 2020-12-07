@@ -12,10 +12,14 @@ namespace IRF_PROJECT
     using System;
     using System.Collections.Generic;
     
-    public partial class Felhasznalok
+    public partial class FelhasznaloAdatok
     {
         public int Id { get; set; }
-        public string Felhasznalo { get; set; }
+        public string teljesnev { get; set; }
+        public string email { get; set; }
+        public string lakhely { get; set; }
+        public string cím { get; set; }
+        public string felhasznalonev { get; set; }
         public string jelszo { get; set; }
     }
 }

@@ -13,10 +13,10 @@ namespace IRF_PROJECT
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class IRF_PROJECTEntities : DbContext
+    public partial class Database1Entities : DbContext
     {
-        public IRF_PROJECTEntities()
-            : base("name=IRF_PROJECTEntities")
+        public Database1Entities()
+            : base("name=Database1Entities")
         {
         }
     
@@ -25,6 +25,8 @@ namespace IRF_PROJECT
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Felhasznalok> Felhasznalok { get; set; }
+        public virtual DbSet<Cikkszámok> Cikkszámok { get; set; }
+        public virtual DbSet<FelhasznaloAdatok> FelhasznaloAdatok { get; set; }
+        public virtual DbSet<Tárhelyek> Tárhelyek { get; set; }
     }
 }
