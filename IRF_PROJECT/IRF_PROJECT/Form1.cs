@@ -13,6 +13,7 @@ namespace IRF_PROJECT
 {
     public partial class Form1 : Form
     {
+        Database1Entities context = new Database1Entities();
         public Form1()
         {
             InitializeComponent(); 
