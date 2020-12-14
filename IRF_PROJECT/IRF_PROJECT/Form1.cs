@@ -20,6 +20,17 @@ namespace IRF_PROJECT
             InitializeComponent();
            // MegjelenoUserControl1 muc = new MegjelenoUserControl1(p);
         }
-       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.Visible = true;
+            List<Penztarca> p = new List<Penztarca>();
+            PenztarcaBeolvasas pbe = new PenztarcaBeolvasas();
+            
+            MegjelenoUserControl1 muc = new MegjelenoUserControl1();
+            
+            panel1.Controls.Add(muc);
+        }
     }
 }
