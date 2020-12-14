@@ -76,6 +76,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MegjelenoUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MegjelenoUserControl1.Designer.cs">
+      <DependentUpon>MegjelenoUserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -91,6 +97,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Penztarca.cs" />
+    <Compile Include="PenztarcaBeolvasas.cs" />
     <Compile Include="Penztarcak.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -98,6 +106,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MegjelenoUserControl1.resx">
+      <DependentUpon>MegjelenoUserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
