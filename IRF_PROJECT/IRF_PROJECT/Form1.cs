@@ -164,7 +164,7 @@ namespace IRF_PROJECT
                 xlSheet.Cells[2 + szamlalo, 3] = elem.Nem;
                 xlSheet.Cells[2 + szamlalo, 4] = elem.Szín;
                 xlSheet.Cells[2 + szamlalo, 5] = elem.Másodlagoskod;
-                xlSheet.Cells[2 + szamlalo, 6] = "valami link" + elem.Másodlagoskod;
+                xlSheet.Cells[2 + szamlalo, 6] = "https://www.markasbolt.hu/keres?gyorkeresoMezo=" + elem.Másodlagoskod;
 
 
                 szamlalo++;
