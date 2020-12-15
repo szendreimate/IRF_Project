@@ -12,13 +12,13 @@ namespace IRF_PROJECT
 {
     public partial class MegjelenoUserControl1 : UserControl
     {
-        public MegjelenoUserControl1()
+        public MegjelenoUserControl1(Penztarca penztarca)
         {
             InitializeComponent();
-            //AdatokBeallitas();
+            AdatokBeallitas(penztarca);
         }
 
-        private void AdatokBeallitas(Penztarca penztarca)
+        public void AdatokBeallitas(Penztarca penztarca)
         {
             Nevlabel.Text = penztarca.Név;
             Markalabel.Text = penztarca.Márka;

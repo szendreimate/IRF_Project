@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IRF_PROJECT
 {
-    class Penztarca
+    public class Penztarca
     {
         public string Név { get; set; }
         public string Márka { get; set; }
