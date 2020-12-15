@@ -82,7 +82,14 @@ namespace IRF_PROJECT
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            DialogResult dr = new DialogResult();
+            Robot_ablak ra = new Robot_ablak();
+            dr = ra.ShowDialog();
+
+            if (dr==DialogResult.OK)
+            {
+                MessageBox.Show("Sikeres megerősítés");
+            }
         }
         
     
