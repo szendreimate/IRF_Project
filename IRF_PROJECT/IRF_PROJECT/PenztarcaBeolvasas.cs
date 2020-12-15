@@ -9,7 +9,7 @@ namespace IRF_PROJECT
 
     public partial class PenztarcaBeolvasas
     {
-        Database1Entities context = new Database1Entities();
+        Database1Entities1 context = new Database1Entities1();
         /*
          static void Main(string[] args)
         {
@@ -64,22 +64,29 @@ namespace IRF_PROJECT
 
                 //    (new FeltetelesAdatok[] { (string)feltadd=item.nev, item.marka, item.nem, item.szin, item.masodlagos }
                 //    );
-                for (int i = 0; i < sorszam; i++)
-                {
-                    retval.Add(new Penztarca());
-                    retval[i].Név = szurtadat[i].nev;
-                    retval[i].Márka = szurtadat[i].marka;
-                    retval[i].Nem = szurtadat[i].nem;
-                    retval[i].Szín = szurtadat[i].szin;
-                    retval[i].Másodlagoskod = szurtadat[i].masodlagos;
+                //for (int i = 0; i < sorszam; i++)
+                //{
+                //    retval.Add(new Penztarca());
+                //    retval[i].Név = szurtadat[i].nev;
+                //    retval[i].Márka = szurtadat[i].marka;
+                //    retval[i].Nem = szurtadat[i].nem;
+                //    retval[i].Szín = szurtadat[i].szin;
+                //    retval[i].Másodlagoskod = szurtadat[i].masodlagos;
 
-                }
+                //}
+                Penztarca penz = new Penztarca();
 
+                penz.Név = item.nev;
+                penz.Márka = item.marka;
+                penz.Nem = item.nem;
+                penz.Szín = item.szin;
+                penz.Másodlagoskod = item.masodlagos;
 
+                retval.Add(penz);
             }
 
 
-
+            
             return retval;
 
             //}

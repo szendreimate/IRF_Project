@@ -9,15 +9,18 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace IRF_PROJECT
 {
     public partial class Form1 : Form
     {
-        Database1Entities context = new Database1Entities();
+        Database1Entities1 context = new Database1Entities1();
         List<Penztarca> p = new List<Penztarca>();
-        
+        Excel.Application xlApp;
+        Excel.Workbook xlWB;
+        Excel.Worksheet xlSheet;
+        Excel.Range xlRange;
         public Form1()
         {
             InitializeComponent();
@@ -57,7 +60,8 @@ namespace IRF_PROJECT
             {
                 panel1.Visible = true;
                 MegjelenoUserControl1 muc = new MegjelenoUserControl1(p[i]);
-               
+                muc.Top = (panel1.Top + 20) * i;
+                muc.Width = panel1.Width;
                 panel1.Controls.Add(muc);
                 panel1.Show();
                 //MessageBox.Show(p[i].ToString());
@@ -89,9 +93,9 @@ namespace IRF_PROJECT
             if (dr==DialogResult.OK)
             {
                 MessageBox.Show("Sikeres megerősítés");
+                
             }
         }
         
-    
-}
+    }
 }
