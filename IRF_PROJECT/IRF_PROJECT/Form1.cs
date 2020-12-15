@@ -93,9 +93,24 @@ namespace IRF_PROJECT
             if (dr==DialogResult.OK)
             {
                 MessageBox.Show("Sikeres megerősítés");
-                
+                CreateExcel();
             }
         }
+        private void CreateExcel()
+        {
+            xlApp = new Excel.Application();
+
+
+            xlWB = xlApp.Workbooks.Add(Missing.Value);
+
+
+            xlSheet = xlWB.ActiveSheet;
+            //CreateTable();
+
+            xlApp.Visible = true;
+            xlApp.UserControl = true;
+        }
+
         
     }
 }
