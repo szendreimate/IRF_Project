@@ -1,10 +1,17 @@
-A programom egy webáruház pénztárcáinak adait képes listázni. Adatbázisomat a jelenlegi munkahelyemen szereztem.
-A raktárban gyakran elõforduló probléma, hogy csak a termék címkéje található meg, amin csak a másodlagos kód szerepel.
-Fizikailag a termék nem.
-Az adatbázis nagysága miatt leszûkítettem a pénztárcákra, amiket egy lokális adatbázissá alakítottam.
-A program kislistázza ezeket a termékeket userontrolok segítségével.
-A szûrõben megadhatjuk az általunk talált címke másodlagos kód részletét vagy akár az egész kódot,
-ezzel leszûkítve a lehetséges opciókat.
-Az exportáló gomb segítségével letölthetjük a listát egy excelbe, amiben megtalálható a termék linkje.
-Így megtudjuk, hogy néz ki valójában a termék és meg tudjuk keresni a hozzá tartozó terméket.
-Kiexportálás elõtt, meg kell adnunk egy megerõsítõ kódot, hogy meggyõzõdjünk, hogy az exportálást tényleg akarjuk-e.
+A programom egy webÃ¡ruhÃ¡z pÃ©nztÃ¡rcÃ¡inak adait kÃ©pes listÃ¡zni. AdatbÃ¡zisomat a jelenlegi munkahelyemen szereztem.
+A raktÃ¡rban gyakran elÅ‘fordulÃ³ problÃ©ma, hogy csak a termÃ©k cÃ­mkÃ©je talÃ¡lhatÃ³ meg, amin csak a mÃ¡sodlagos kÃ³d szerepel.
+Fizikailag a termÃ©k nem.
+ AdatbÃ¡zis lÃ©trehozÃ¡sa, kapcsolÃ³dÃ¡s Ã©s legalÃ¡bb egy tÃ¡bla adatainak beolvasÃ¡sa
+Az adatbÃ¡zis nagysÃ¡ga miatt leszÅ±kÃ­tettem a pÃ©nztÃ¡rcÃ¡kra, amiket egy lokÃ¡lis adatbÃ¡zissÃ¡ alakÃ­tottam.
+A program kislistÃ¡zza ezeket a termÃ©keket userontrolok segÃ­tsÃ©gÃ©vel.
+
+LINQ lekÃ©rdezÃ©s hasznÃ¡lata legalÃ¡bb egy WHERE feltÃ©tellel
+A szÅ±rÅ‘ben megadhatjuk az Ã¡ltalunk talÃ¡lt cÃ­mke mÃ¡sodlagos kÃ³d rÃ©szletÃ©t vagy akÃ¡r az egÃ©sz kÃ³dot,
+ezzel leszÅ±kÃ­tve a lehetsÃ©ges opciÃ³kat.
+
+FormÃ¡zott Excel lÃ©trehozÃ¡sa a rendelkezÃ©sre Ã¡llÃ³ adatokbÃ³l
+Az exportÃ¡lÃ³ gomb segÃ­tsÃ©gÃ©vel letÃ¶lthetjÃ¼k a listÃ¡t egy excelbe, amiben megtalÃ¡lhatÃ³ a termÃ©k linkje.
+Ãgy megtudjuk, hogy nÃ©z ki valÃ³jÃ¡ban a termÃ©k Ã©s meg tudjuk keresni a hozzÃ¡ tartozÃ³ termÃ©ket.
+
+VÃ©letlenszÃ¡m generÃ¡lÃ¡s Ã©s felhasznÃ¡lÃ¡s
+KiexportÃ¡lÃ¡s elÅ‘tt, meg kell adnunk egy megerÅ‘sÃ­tÅ‘ kÃ³dot, hogy meggyÅ‘zÅ‘djÃ¼nk, hogy az exportÃ¡lÃ¡st tÃ©nyleg akarjuk-e.
