@@ -205,5 +205,9 @@ namespace IRF_PROJECT
             return ExcelCoordinate;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -37,6 +37,7 @@
             this.Markalabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Nevlabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Masodlagoslabel
@@ -54,12 +55,12 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(39, 119);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 17);
+            this.label7.Size = new System.Drawing.Size(119, 17);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Másodlagos kód";
+            this.label7.Text = "Másodlagos kód:";
             // 
             // labelSzin
             // 
@@ -76,12 +77,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(344, 58);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 17);
+            this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Színe";
+            this.label5.Text = "Színe:";
             // 
             // Nemlabel
             // 
@@ -98,12 +99,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(39, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 17);
+            this.label3.Size = new System.Drawing.Size(94, 17);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Ajánlott nem";
+            this.label3.Text = "Ajánlott nem:";
             // 
             // Markalabel
             // 
@@ -120,28 +121,43 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(39, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Márka";
+            this.label1.Text = "Márka:";
             // 
             // Nevlabel
             // 
             this.Nevlabel.AutoSize = true;
-            this.Nevlabel.Font = new System.Drawing.Font("Segoe MDL2 Assets", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nevlabel.Font = new System.Drawing.Font("Segoe MDL2 Assets", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nevlabel.ForeColor = System.Drawing.Color.Red;
-            this.Nevlabel.Location = new System.Drawing.Point(31, 12);
+            this.Nevlabel.Location = new System.Drawing.Point(162, 10);
             this.Nevlabel.Name = "Nevlabel";
             this.Nevlabel.Size = new System.Drawing.Size(167, 28);
             this.Nevlabel.TabIndex = 9;
             this.Nevlabel.Text = "A termék neve";
+            this.Nevlabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(37, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Termék neve:";
             // 
             // MegjelenoUserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Masodlagoslabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.labelSzin);
@@ -152,7 +168,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Nevlabel);
             this.Name = "MegjelenoUserControl1";
-            this.Size = new System.Drawing.Size(565, 148);
+            this.Size = new System.Drawing.Size(563, 146);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,5 +185,6 @@
         private System.Windows.Forms.Label Markalabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Nevlabel;
+        private System.Windows.Forms.Label label2;
     }
 }
