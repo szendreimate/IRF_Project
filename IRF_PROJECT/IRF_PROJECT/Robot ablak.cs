@@ -24,12 +24,31 @@ namespace IRF_PROJECT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (megerositoszam == Convert.ToInt32(textBox1.Text))
+            try
             {
-                sikeres = true;
-                this.DialogResult = DialogResult.OK;
+                if (megerositoszam == Convert.ToInt32(textBox1.Text))
+                {
+                    sikeres = true;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Helytelen megerősítés");
+                    this.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Helytelen megerősítés");
                 this.Close();
             }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

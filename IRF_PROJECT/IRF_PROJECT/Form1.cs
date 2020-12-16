@@ -17,45 +17,50 @@ namespace IRF_PROJECT
     {
         Database1Entities1 context = new Database1Entities1();
         List<Penztarca> p = new List<Penztarca>();
+
         Excel.Application xlApp;
         Excel.Workbook xlWB;
         Excel.Worksheet xlSheet;
-        Excel.Range xlRange;
+        
         public Form1()
         {
             InitializeComponent();
             AdatokBetöltése();
         }
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             AdatokBetöltése();
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = new DialogResult();
+            Robot_ablak ra = new Robot_ablak();
+            dr = ra.ShowDialog();
 
+            if (dr == DialogResult.OK)
+            {
+                MessageBox.Show("Sikeres megerősítés");
+                CreateExcel();
+            }
+        }
         public void AdatokBetöltése()
         {
             panel1.Controls.Clear();
             panel1.Visible = true;
-            //List<Penztarca> p = new List<Penztarca>();
+            
             PenztarcaBeolvasas pbe = new PenztarcaBeolvasas();
-            //p = pbe.fillpenztarca();
-
-            //try
-            //{
-            //if (string.IsNullOrEmpty(textBox1.Text.ToString()))
-            //{
-            //    MessageBox.Show("Szar");
-            //    return;
-            //}
-            //else
-            //{
+      
             p = pbe.fillFilteredPenztarca(textBox1.Text.ToString());
-            //AdatokBeallitas(p);
+           
             var sorszam = (from s in context.Penztarcak
                            where s.masodlagoskod.Contains(textBox1.Text)
                            select s.Id).Count();
 
-            //MegjelenoUserControl muc = new MegjelenoUserControl(p[1]);
+           
             for (int i = 0; i < sorszam; i++)
             {
                 panel1.Visible = true;
@@ -66,36 +71,10 @@ namespace IRF_PROJECT
                 panel1.Show();
                 //MessageBox.Show(p[i].ToString());
             }
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    UserControlproba uc = new UserControlproba();
-            //    uc.Top = (panel1.Top+10) * i;
-
-            //    panel1.Controls.Add(uc);
-            //}
-            //    }
-
-            //}
-            //catch (Exception)
-            //{
-
-            //    throw;
-            //}
-
+           
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            DialogResult dr = new DialogResult();
-            Robot_ablak ra = new Robot_ablak();
-            dr = ra.ShowDialog();
-
-            if (dr==DialogResult.OK)
-            {
-                MessageBox.Show("Sikeres megerősítés");
-                CreateExcel();
-            }
-        }
+        
         private void CreateExcel()
         {
             xlApp = new Excel.Application();
@@ -128,33 +107,7 @@ namespace IRF_PROJECT
                 xlSheet.Cells[1, i + 1] = headers[i];
 
             }
-            //object[,] values = new object[p.Count, headers.Length];
-            //int szamlalo = 0;
-            //foreach (Penztarca elem in p)
-            //{
-            //    values[szamlalo, 0] = elem.Név;
-            //    values[szamlalo, 1] = elem.Márka;
-            //    values[szamlalo, 2] = elem.Nem;
-            //    values[szamlalo, 3] = elem.Szín;
-            //    values[szamlalo, 4] = elem.Másodlagoskod;
-            //    values[szamlalo,6]=
-            //    szamlalo++;
-
-
-            //}
-
-            //for (int i = 0; i < szamlalo; i++)
-            //{
-
-            //    xlSheet.Cells[2 + i, 1] = values[i, 0];
-            //    xlSheet.Cells[2 + i, 2] = values[i, 1];
-            //    xlSheet.Cells[2 + i, 3] = values[i, 2];
-            //    xlSheet.Cells[2 + i, 4] = values[i, 3];
-            //    xlSheet.Cells[2 + i, 5] = values[i, 4];
-            //    xlSheet.Cells[2 + i, 6] = "valami link" + values[i, 4].ToString();
-
-            //}
-
+           
             int szamlalo = 0;
 
             foreach (Penztarca elem in p)
@@ -205,9 +158,6 @@ namespace IRF_PROJECT
             return ExcelCoordinate;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }
